@@ -1,6 +1,4 @@
-function addTodo(todo){
-    console.log(todo);
-}
+
 //function addTodo(todo){
 /*const todos = [
     { name:"todo1",description:"todo1 desc"},
@@ -9,16 +7,26 @@ function addTodo(todo){
 
 ]*/
 let todos = [
-    {id:0, name:"todo1",description:"todo1 desc"},
-    {id:1, name:"todo2",description:"todo2 desc"},
-    {id:2, name:"todo3",description:"todo3 desc"},
+    {id:0, name:"todo1",discription:"todo1 desc"},
+    {id:1, name:"todo2",discription:"todo2 desc"},
+    {id:2, name:"todo3",discription:"todo3 desc"},
 
 ]
 
 //return todos;
 
-function addTodo(){
-    todos.push({name:"todo1", description:"todo1 desc"});
+function addTodo(todo){
+    console.log(todo);
+   // todos.push({name:"todo1", description:"todo1 desc"});
+   todos.push(todo);
+    return todos;
+}
+function editTodo(id,name,discription){
+    let todo = todos.find(function(todo){
+        return todo.id==id;
+    });
+    todo.name= name;
+    todo.discription=discription;
     return todos;
 }
 function deleteTodo(id){
@@ -44,3 +52,4 @@ exports.addTodo=addTodo;
 exports.getTodo=getTodo;
 exports.name=name;
 exports.deleteTodo=deleteTodo;
+exports.editTodo=editTodo;
