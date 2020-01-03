@@ -1,4 +1,4 @@
-
+const db=require('./db');
 //function addTodo(todo){
 /*const todos = [
     { name:"todo1",description:"todo1 desc"},
@@ -38,6 +38,10 @@ return todos;
 }
 
 function getTodo(){
+    db.Todo.find({})
+    .then(data=>{
+        console.log(data);
+    })
     return todos;
 }
 /*function getTodo(todo){

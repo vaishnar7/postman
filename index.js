@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const todo=require('./todo');
+
 //todo.addTodo("todo");
 const app = express();
 app.use(bodyParser.json());
@@ -18,6 +19,11 @@ const port = 3000;
         res.send(todos);
     //res.send(JSON.stringify(todos));
 })
+
+
+   
+    
+
 app.post('/create', function(req,res){
    // console.log(req.body);
    
